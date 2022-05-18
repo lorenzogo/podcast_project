@@ -14,9 +14,10 @@
   }
 </script>
 
-<style lang="postcss">
-img {
-  object-fit: cover;
-  @apply rounded-2xl;
-}
+<style lang="sass">
+img 
+  object-fit: cover
+  @apply rounded-2xl
+  border: 1px solid $color
+
 </style>
