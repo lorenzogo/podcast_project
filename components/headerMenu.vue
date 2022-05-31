@@ -3,9 +3,9 @@
 
 <template>
   <div class="superior">
-    <div class="avatar"></div>
+    <img class="avatar" src= "avatar.svg" alt="avatar">
     <h1>Título de sección</h1>
-    <div>Logo</div>
+    <img class="simbolo" src= "simbolo.svg" alt="simobolo onda cero podcast">
   </div>
 </template>
 
@@ -13,14 +13,22 @@
 <style lang="postcss">
   .superior {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 1em;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   }
 
   .avatar {
-    height: 30px;
-    width: 30px;
-    background-color: red;
-    border-radius: 100%;
+    height: 46px;
+    width: 46px;
+  }
+
+  .simbolo {
+    width: 49px;
+    height: 21px;
+    border-radius: 0;
   }
 
   h1 {

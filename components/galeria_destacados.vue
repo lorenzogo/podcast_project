@@ -8,6 +8,7 @@
         v-for="(card, index) in cards"
         :key="index"
         :title="card.title"
+        :des="card.des"
         :source="card.source"/>
     </div>
   </section>

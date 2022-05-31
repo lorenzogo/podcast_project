@@ -3,7 +3,7 @@
 <template>
   <article class="player">
     <div>
-      <img src="/ilustra_tipo.jpg" alt="ilustra">
+      <img class="min" src="/ilustra_tipo.jpg" alt="ilustra">
     </div>
     <button @click="playpause">
       <MIconPlay v-show="!playing"/>
@@ -46,10 +46,13 @@
   .player {
     display: flex;
     @apply bg-gray-400 text-gray-100 ;
-    width: fit-content;
+    width: 100%;
+    height: 100px;
     padding: 1em;
     gap: 1em;
   }
-
+  .min {
+    height: 60px;
+  }
 
 </style>
