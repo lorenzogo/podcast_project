@@ -1,7 +1,7 @@
 <!-- CARD HORIZONTAL LISTADO  -->
 <template>
     <section>
-        <h1>Actualidad</h1>
+        <h3>Actualidad</h3>
         <div class="card-horizontal-list">
             <card-horizontal
                 v-for="(card, index) in cards"
@@ -24,10 +24,11 @@
 <style lang="postcss">
   .card-horizontal-list {
     display: flex;
-    flex-direction: column;
-    /* background-color: red; */
-    width: fit-content;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* width: fit-content; */
     padding: 1em;
+    gap: 0.5em;
   }
 
 </style>

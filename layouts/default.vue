@@ -3,7 +3,7 @@
     <header><headerMenu/></header>
     <Nuxt/>
     <div class="menu_inferior"><footerMenu/></div>
-    <footer>Este es el footer</footer>
+    <footer class="nota"> Lorenzo Gómez. Gráfica multimedia. Programación 3GB. <a href="https://esdmadrid.es" target="blank" class="bold">Escuela Superior de Diseño de Madrid</a>. 2022</footer>
     <div class="repro"><reproductor :post="'PLAY'"/></div>
   </main>
 </template>
@@ -16,17 +16,14 @@
     order: -2
   }
 
-
-  body {
-    font-size: 16px;
-    background-color: #EDEDED;
-  }
-
   footer {
+    display: flex;
+    align-items: center;
     background-color: black;
     color: white;
     height: 60px;
-    padding: 1em;
+    width: 100%;
+    padding-left: 1.5em;
   }
 
   .general {
@@ -43,13 +40,6 @@
     position: sticky;
     bottom: 0;
     z-index: 1;
-  }
-
-/* tipografía */
-
-  h1 {
-    font-size: 1.2em;
-    font-weight: 700;
   }
 
 </style>

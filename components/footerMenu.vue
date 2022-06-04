@@ -1,19 +1,19 @@
 <!-- Este es el MENU INFERIOR. Permite navegar entre apartados. -->
 
 <template>
-  <nav class="inferior">
+  <nav class="inferior negro blanco-t">
     <ul>
       <li>
-        <Nuxtlink to="/">Inicio</Nuxtlink>
+        <NuxtLink to="/">Inicio</NuxtLink>
       </li>
       <li>
-        <Nuxtlink to="/colecciones">Mis colecciones</Nuxtlink>
+        <NuxtLink to="/colecciones">Mis colecciones</NuxtLink>
       </li>
       <li>
-        <Nuxtlink to="/buscador">Buscador</Nuxtlink>
+        <NuxtLink to="/buscador">Buscador</NuxtLink>
       </li>
       <li>
-        <Nuxtlink to="/ajustes">Ajustes</Nuxtlink>
+        <NuxtLink to="/ajustes">Ajustes</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -26,11 +26,6 @@
 
   li {
     padding: 1em;
-  }
-
-  .inferior {
-    background: #000000;
-    color: white;
   }
 
 </style>

@@ -1,8 +1,8 @@
 <!-- Galeria que contiene varias CARDS  -->
 
 <template>
-  <section>
-    <h1>Destacados de la semana</h1>
+  <section class="arriba_uno">
+    <h3>Destacados de la semana</h3>
     <div class="card-section">
       <card
         v-for="(card, index) in cards"
@@ -18,24 +18,17 @@
 <style lang="postcss">
   .card-section {
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
     padding: 1em;
+    overflow-x: scroll;
+    overflow: -moz-scrollbars-none;
   }
+
 </style>
 
 
 <script>
 export default {
-//  data () {
-//    return {
-//      cards: [
-//        {id: 1, title: 'título uno', source:'/ilustra_tipo.jpg'},
-//        {id:2, title: 'título dos', source: '/locutor.png'},
-//        {id: 1, title: 'título tres', source:'/ilustra_tipo.jpg'},
-//        {id:2, title: 'título cuatro', source: '/locutor.png'}
-//      ]
-//    }
-//  }
 props: ['cards']
 }</script>
 

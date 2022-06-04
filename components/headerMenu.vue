@@ -2,7 +2,7 @@
 
 
 <template>
-  <div class="superior">
+  <div class="superior blanco">
     <img class="avatar" src= "avatar.svg" alt="avatar">
     <h1>Título de sección</h1>
     <img class="simbolo" src= "simbolo.svg" alt="simobolo onda cero podcast">
@@ -16,7 +16,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1em;
-    background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   }
 

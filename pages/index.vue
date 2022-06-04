@@ -1,5 +1,6 @@
 <template>
-  <section>
+  <section class="contenedor">
+    <h3 class="verde-t">¡Bienvenido!</h3>
     <galeria-destacados :cards="cards"/>
     <galeria-destacados :cards="cards2"/>
     <card-horizontal-listado :cards="cardsHoz"/>
@@ -22,19 +23,25 @@ export default {
           {id:4, title: 'título cuatro', des: 'Cuarta', source: '/locutor.png'}
         ],
         cards2: [
-          {id:1, title: 'título de pruebA uno', source:'/ilustra_tipo.jpg'},
-          {id:2, title: 'título PRUEBA dos', source: '/locutor.png'},
-          {id:3, title: 'título BLS BLAtres', source:'/ilustra_tipo.jpg'},
-          {id:4, title: 'título JJFJ cuatro', source: '/locutor.png'}
+          {id:1, title: 'título uno', des: 'Primera', source:'/ilustra_tipo.jpg'},
+          {id:2, title: 'título dos', des: 'Segunda', source: '/locutor.png'},
+          {id:3, title: 'título tres', des: 'Tercera', source:'/ilustra_tipo.jpg'},
+          {id:4, title: 'título cuatro', des: 'Cuarta', source: '/locutor.png'}
         ],
         cardsHoz: [
-          {id:1, title: 'título h uno', exp: 'Primera', source:'/ilustra_tipo.jpg'},
-          {id:2, title: 'título h dos', exp: 'Segunda', source: '/locutor.png'},
-          {id:3, title: 'título h tres', exp: 'Tercera', source:'/ilustra_tipo.jpg'},
-          {id:4, title: 'título h cuatro', exp: 'Cuarta', source: '/locutor.png'}
+          {id:1, title: 'título uno', exp: 'Primera', source:'/ilustra_tipo.jpg'},
+          {id:2, title: 'título dos', exp: 'Segunda', source: '/locutor.png'},
+          {id:3, title: 'título tres', exp: 'Tercera', source:'/ilustra_tipo.jpg'},
+          {id:4, title: 'título cuatro', exp: 'Cuarta', source: '/locutor.png'}
         ]
-
       }
     }
 }
 </script>
+
+
+<style lang="postcss">
+  .contenedor {
+    padding: 1em;
+  }
+</style>
