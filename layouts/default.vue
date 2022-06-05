@@ -4,9 +4,9 @@
     <Nuxt/>
     <div class="menu_inferior"><footerMenu/></div>
     <footer class="nota"> Lorenzo Gómez. Gráfica multimedia. Programación 3GB. <a href="https://esdmadrid.es" target="blank" class="bold">Escuela Superior de Diseño de Madrid</a>. 2022</footer>
-    <div class="repro"><reproductor :post="'PLAY'"/></div>
   </main>
 </template>
+
 
 
 <style lang="postcss">
@@ -36,10 +36,5 @@
       order: -1;
     }
 
-  .repro {
-    position: sticky;
-    bottom: 0;
-    z-index: 1;
-  }
 
 </style>

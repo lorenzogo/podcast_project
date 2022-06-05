@@ -1,7 +1,7 @@
 <!-- CARD HORIZONTAL LISTADO  -->
 <template>
     <section>
-        <h3>Actualidad</h3>
+        <h3>{{seccionHoz}}</h3>
         <div class="card-horizontal-list">
             <card-horizontal
                 v-for="(card, index) in cards"
@@ -17,7 +17,7 @@
 
 <script>
     export default {
-        props: ['cards']
+        props: ['seccionHoz','cards']
     }
 </script>
 
@@ -25,10 +25,9 @@
   .card-horizontal-list {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* width: fit-content; */
     padding: 1em;
     gap: 0.5em;
+    margin-top: 0.8em;
   }
 
 </style>

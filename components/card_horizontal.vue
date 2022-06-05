@@ -1,7 +1,8 @@
 <!--CARD HORIZONTAL-->
 
 <template>
-    <article class="card-horizontal">
+<div>
+  <article class="card-horizontal">
         <img class="ilustraHozPod" :src= "source" alt="portada">
         <img class="puntos" src= "puntos.svg" alt="opciones">
         <div class="horizontal_segundo">
@@ -9,12 +10,18 @@
             <p>{{ exp }}</p>
         </div>
         <button class="playBoton"><img class="play" src= "play.svg" alt="iniciar"></button>
-    </article>
+  </article>
+</div>
 </template>
 
 <script>
     export default {
-        props: ['title','exp','source']
+        props: ['title','exp','source'],
+        data() {
+          return {
+            showRep: false
+          }
+        }
     }
 </script>
 
@@ -27,10 +34,9 @@
     align-items: center;
     justify-content: flex-end;
     height: 100px;
-    min-width: 400px;
+    width: 380px;
     background-color:#ffffff;
     border-radius: 100px;
-    /* box-shadow: 2px 0px 4px 0; */
     margin-bottom: 1em;
     padding-left: 5em;
     margin-left: 1em;
@@ -71,5 +77,7 @@
   .playBoton{
        margin-right: 0.5em;
   }
+
+
 </style>
 

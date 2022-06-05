@@ -6,14 +6,14 @@
       <li>
         <NuxtLink to="/">Inicio</NuxtLink>
       </li>
-      <li>
-        <NuxtLink to="/colecciones">Mis colecciones</NuxtLink>
+      <li>Mis colecciones
+        <!-- <NuxtLink to="/colecciones">Mis colecciones</NuxtLink> -->
       </li>
-      <li>
-        <NuxtLink to="/buscador">Buscador</NuxtLink>
+      <li>Buscador
+        <!-- <NuxtLink to="/buscador">Buscador</NuxtLink> -->
       </li>
-      <li>
-        <NuxtLink to="/ajustes">Ajustes</NuxtLink>
+      <li>Ajustes
+        <!-- <NuxtLink to="/ajustes">Ajustes</NuxtLink> -->
       </li>
     </ul>
   </nav>

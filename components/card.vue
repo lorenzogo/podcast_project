@@ -22,10 +22,11 @@
     min-width: 222px;
 }
 
-img {
+.ilustra {
   height: 180px;
   object-fit: cover;
   @apply rounded-2xl;
+  margin-bottom: 0.4em;
   }
 
 </style>

@@ -2,7 +2,7 @@
 
 <template>
   <section class="arriba_uno">
-    <h3>Destacados de la semana</h3>
+    <h3>{{seccion}}</h3>
     <div class="card-section">
       <card
         v-for="(card, index) in cards"
@@ -21,7 +21,6 @@
     gap: 1em;
     padding: 1em;
     overflow-x: scroll;
-    overflow: -moz-scrollbars-none;
   }
 
 </style>
@@ -29,7 +28,7 @@
 
 <script>
 export default {
-props: ['cards']
+props: ['seccion','cards']
 }</script>
 
 
