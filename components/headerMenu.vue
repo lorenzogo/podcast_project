@@ -4,10 +4,21 @@
 <template>
   <div class="superior blanco">
     <img class="avatar" src= "avatar.svg" alt="avatar">
-    <h1>Título de sección</h1>
+    <h1>{{ seccion == "index" ? "Home" : seccion }}</h1>
     <img class="simbolo" src= "simbolo.svg" alt="simobolo onda cero podcast">
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        seccion: this.$nuxt.$route.name
+
+      }
+    },
+  }
+</script>
 
 
 <style lang="postcss">

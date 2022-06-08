@@ -9,18 +9,27 @@
             <h3>{{ title }}</h3>
             <p>{{ exp }}</p>
         </div>
-        <button class="playBoton"><img class="play" src= "play.svg" alt="iniciar"></button>
+        <button 
+        class="playBoton"
+        @click="toggle"
+        ><img class="play" src= "play.svg" alt="iniciar"></button>
   </article>
 </div>
 </template>
 
 <script>
+    import { mapMutations } from 'vuex'
     export default {
         props: ['title','exp','source'],
         data() {
           return {
             showRep: false
           }
+        },
+        methods:{
+          ...mapMutations([
+            'toggle'
+          ])
         }
     }
 </script>

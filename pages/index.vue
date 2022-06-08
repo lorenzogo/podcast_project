@@ -1,14 +1,23 @@
+<!-- Index Page -->
+
 <template>
   <div>
     <section class="contenedor">
       <h2 class="gris_t">¡Bienvenido!</h2>
+      
       <galeria-destacados :seccion="seccion01" :cards="cards1"/>
+    
       <card-horizontal-listado class="arriba_medio" :seccionHoz="seccionHoz01" :cards="cardsHoz1"/>
       <galeria-destacados :seccion="seccion02" :cards="cards2"/>
       <galeria-destacados :seccion="seccion03" :cards="cards3"/>
       <galeria-destacados :seccion="seccion04" :cards="cards4"/>
     </section>
-    <div class="repro"><reproductor :titulo_rep="titulo_rep" :descripcion_rep="descripcion_rep"/></div>
+    <div class="repro">
+      <reproductor
+        v-if="isPlaying"
+        :titulo_rep="titulo_rep"
+        :descripcion_rep="descripcion_rep"/>
+    </div>
   </div>
 </template>
 
@@ -17,11 +26,17 @@
 import Galeria_destacados from '../components/galeria_destacados.vue';
 import Reproductor from '../components/reproductor.vue';
 import Card_horizontal_listado from '../components/card_horizontal_listado.vue';
+import Boton_simple from '../components/boton_simple.vue';
+import Boton_redondo from '../components/boton_redondo.vue';
+
+import {mapState} from 'vuex'
+
 export default {
     name: "IndexPage",
-    components: { Galeria_destacados, Reproductor, Card_horizontal_listado },
+    components: { Galeria_destacados, Reproductor, Card_horizontal_listado, Boton_simple, Boton_redondo },
     data () {
       return {
+        seccion: 'inicio',
         seccion01: 'Destacados de esta semana',
         cards1: [
           {id:1, title: 'Radioestadio', des: 'Vive todo el deporte del fin de semana.', source:'/radio_estadio.png'},
@@ -64,9 +79,21 @@ export default {
           {id:4, title: '1931', des: 'Una serie documental de Juan Carlos Alsina.', source: '/1931.png'}
         ],
         titulo_rep: 'título',
-        descripcion_rep: 'descripción'
+        descripcion_rep: 'descripción',
+        name: 'ejemplo'
       }
-    }
+    },
+    
+    computed:{
+      ...mapState({
+        isPlaying: state => state.isPlaying      
+      })
+    },
+    // methods:{
+    //   ...mapMutations([
+    //     'toggle'
+    //   ])
+    // }
 }
 </script>
 

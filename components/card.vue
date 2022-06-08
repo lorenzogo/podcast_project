@@ -1,13 +1,17 @@
 <!-- CARD  -->
 
 <template>
-  <article class="card">
-    <img class="ilustra" :src= "source" alt="portada">
-    <div class="izq_medio margen_medio">
-      <h2>{{ title }}</h2>
-      <p>{{ des }}</p>
-    </div>
-  </article>
+<div>
+  <!-- <nuxt-link :to="{ name: 'podcast', params: { cosa: 'private' }}"> -->
+    <article class="card">
+      <img class="ilustra" :src= "source" alt="portada">
+      <div class="izq_medio margen_medio">
+        <h2>{{ title }}</h2>
+        <p>{{ des }}</p>
+      </div>
+    </article>
+  <!-- </nuxt-link> -->
+  </div>
 </template>
 
 
