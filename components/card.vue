@@ -1,8 +1,8 @@
 <!-- CARD  -->
 
 <template>
-<div>
-  <!-- <nuxt-link :to="{ name: 'podcast', params: { cosa: 'private' }}"> -->
+
+  <nuxt-link :to="{ name: 'podcasts-podcast', params: { podcast: {title: title, des: des, source: source} }}">
     <article class="card">
       <img class="ilustra" :src= "source" alt="portada">
       <div class="izq_medio margen_medio">
@@ -10,8 +10,8 @@
         <p>{{ des }}</p>
       </div>
     </article>
-  <!-- </nuxt-link> -->
-  </div>
+  </nuxt-link>
+
 </template>
 
 

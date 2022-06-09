@@ -2,12 +2,12 @@
 
 <template>
   <div class="ficha">
-    {{title}}
-    <div class="flecha">
-      <img src="/flecha.svg" alt="flecha hacia la izquierda"/>
-    </div>
-    
-    <Portada :icons="icons" :name="name"/>
+    <nuxt-link to="/">
+      <div class="flecha">
+        <img src="/flecha.svg" alt="flecha hacia la izquierda"/>
+      </div>
+    </nuxt-link>
+    <Portada :icons="icons" :name="name" :podcast="podcast" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ import Portada from "../../components/portada.vue";
     data () {
       return {
         name: "reproducir",
-        title: "",
+        podcast: "",
         icons: [
           {id:1, source:'/like.svg', accesible:'me gusta', anclaje:'hola' },
           {id:2, source:'/like.svg', accesible:'me gusta', anclaje:'que' },
@@ -32,7 +32,7 @@ import Portada from "../../components/portada.vue";
     },
     mounted() {
       console.log(this.$route.params)
-        this.title = this.$route.params.cosa;
+        this.podcast = this.$route.params.podcast;
     }
 }
 </script>
