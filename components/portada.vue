@@ -3,11 +3,11 @@
 <template>
   <article>
     <div class="port_uno">
-      <img src="portada.jpg" alt="Portada La Cultureta">
+      <img :src="podcast.source" alt="Portada La Cultureta">
       <div class="port_dos">
         <div class="port_text">
-          <h1 class="nopadding">La Cultureta</h1>
-          <p>Todos los temas de actualidad en Onda Cero Radio con la más amena de las tertulias.</p>
+          <h1 class="nopadding">{{podcast.title}}</h1>
+          <p>{{podcast.des}}</p>
         </div>
         <div class="boton_compuesto">
           <boton-simple class="simple verde" :name="name"/>
@@ -31,7 +31,7 @@
 <script>
 import Boton_compartir from './BotonCompartir.vue'
 export default {
-    props: ['name','icons'],
+    props: ['name','icons', 'podcast'],
     components: { Boton_compartir }
 }
 
