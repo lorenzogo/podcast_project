@@ -2,7 +2,7 @@
 
 <template>
   <button class="boton_redondo">
-      <img src="play_negro.svg" alt="botón play" class="playincircle"/>
+      <img src="/play_negro.svg" alt="botón play" class="playincircle"/>
   </button>
 </template>
 

@@ -1,12 +1,12 @@
 <!-- Portada Podcast -->
 
 <template>
-  <article>
+  <article class="portadaPodcast">
     <div class="port_uno">
-      <img :src="podcast.source" alt="Portada La Cultureta">
+      <img class="portEpisodio" :src="podcast.source" alt="Portada La Cultureta">
       <div class="port_dos">
         <div class="port_text">
-          <h1 class="nopadding">{{podcast.title}}</h1>
+          <h1 class="nopadding abajo_medio">{{podcast.title}}</h1>
           <p>{{podcast.des}}</p>
         </div>
         <div class="boton_compuesto">
@@ -39,10 +39,23 @@ export default {
 </script>
 
 <style lang="postcss">
+
+.portadaPodcast {
+width: 800px;
+/* background-color: yellow; */
+}
+
 .port_uno {
   display: flex;
   margin: 1em;
+  width: 100%;
 
+}
+
+.portEpisodio {
+  object-fit: contain;
+  height: auto;
+  width: 30%;
 }
 
 .port_dos {
@@ -51,6 +64,9 @@ export default {
   align-items: center;
   padding: 0;
   margin-left: 3em;
+  width: 70%;
+  /* background-color: aqua; */
+
 }
 
 .port_text {
@@ -78,9 +94,11 @@ export default {
 
 .menu_compartir {
   display: flex;
+  justify-content: center;
   width: 100%;
-  justify-content: space-between;
+  gap: 1em;
   padding:  1em 2em 0 2em;
+  /* background-color: red; */
 }
 </style>
 

@@ -4,9 +4,9 @@
   <div>
     <section class="contenedor">
       <h2 class="gris_t">¡Bienvenido!</h2>
-      
+
       <galeria-destacados :seccion="seccion01" :cards="cards1"/>
-    
+
       <card-horizontal-listado class="arriba_medio" :seccionHoz="seccionHoz01" :cards="cardsHoz1"/>
       <galeria-destacados :seccion="seccion02" :cards="cards2"/>
       <galeria-destacados :seccion="seccion03" :cards="cards3"/>
@@ -39,7 +39,7 @@ export default {
         seccion: 'inicio',
         seccion01: 'Destacados de esta semana',
         cards1: [
-          {id:1, title: 'Radioestadio', des: 'Vive todo el deporte del fin de semana.', source:'/radio_estadio.png'},
+          {id:1, title: 'Radioestadio', des: 'Vive todo el deporte del fin de semana.', source:'/radio_estadio.png', largo: 'Programa  completo de Radioestadio noche con Aitor Gómez. Los nombres del mercado de fichajes con Gareth Bale a la cabeza. La tertulia, charlamos con Rafa Alkorta y el fútbol internacional'},
           {id:2, title: 'Salud financiera', des: 'El podcast para gestionar mejor tus finanzas', source: '/salud_financiera.png'},
           {id:3, title: 'Un alto en el camino', des: 'Cosas de viajes y mucho más', source:'/alto_camino.png'},
           {id:4, title: 'La cultureta', des: 'Todos los temas de actualidad', source: '/ilustra_tipo.jpg'},
@@ -83,10 +83,10 @@ export default {
         name: 'ejemplo'
       }
     },
-    
+
     computed:{
       ...mapState({
-        isPlaying: state => state.isPlaying      
+        isPlaying: state => state.isPlaying
       })
     },
     // methods:{
@@ -108,5 +108,6 @@ export default {
     bottom: 0;
     z-index: 1;
   }
+
 
 </style>

@@ -1,25 +1,25 @@
-<!-- Card episodio podcast -->
+<!-- Card episodio podcast  -->
 <template>
-  <div>
+
     <article class="card-episodio">
-          <img class="ilustra-epi" :src= "source" alt="portada">
-          <img class="puntos" src= "puntos.svg" alt="opciones">
-          <div class="horizontal_segundo">
-              <h3>{{ title }}</h3>
-              <p>{{ exp }}</p>
+          <img class="ilustra-epi" src="/1931.png" alt="portada">
+          <img class="puntos" src= "/puntos.svg" alt="opciones">
+          <div class="horizontal_segundo hEp">
+              <h3>{{title}}</h3>
+              <p>{{exp}}</p>
           </div>
           <button
           class="playBoton"
           @click="toggle"
-          ><img class="play" src= "play.svg" alt="iniciar"></button>
+          ><img class="play" src= "/play.svg" alt="iniciar"></button>
     </article>
-  </div>
+
 </template>
 
 <script>
     import { mapMutations } from 'vuex'
     export default {
-        props: ['title','exp','source'],
+        props: ['title','exp','src'],
         data() {
           return {
             showRep: false
@@ -38,27 +38,26 @@
 
   .card-episodio {
     display: flex;
-    position: relative;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     height: 100px;
-    width: 500px;
+    width: 100%;
     background-color:#ffffff;
     margin-bottom: 1em;
-    padding-left: 5em;
+    padding: 0.2em;
     margin-left: 1em;
     gap: 16px
-
-
-
   }
 
   .ilustra-epi {
     height: 90%;
     border-radius: 0px;
-
-
   }
+
+.hEp {
+  width:fit-content;
+}
+
 
 
 </style>

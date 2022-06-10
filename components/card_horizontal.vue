@@ -9,7 +9,7 @@
             <h3>{{ title }}</h3>
             <p>{{ exp }}</p>
         </div>
-        <button 
+        <button
         class="playBoton"
         @click="toggle"
         ><img class="play" src= "play.svg" alt="iniciar"></button>
